@@ -65,7 +65,7 @@ namespace C
                     break;
             }
 
-            //Console.WriteLine($"This is your pokemon {Pokemon1.Pname}");
+            
             Console.WriteLine($"These are his moves");
             Pokemon1.showMoves();
 
@@ -74,6 +74,79 @@ namespace C
             Pokemon1.Battle(EnemyPokemon1);
 
             Console.WriteLine("This time u won!");
+
+            Console.WriteLine("Start your journey, Where do you want to go first?");
+            Console.WriteLine("1.Pallet Town");
+            Console.WriteLine("2.Viridian City");
+            Console.WriteLine("3.Pewter City");
+            
+            string location = Console.ReadLine();
+            string currentLocation = null;
+            switch(location)
+            {
+                case "1":
+                    Console.WriteLine("You are in Pallet Town, where your journey begins!");
+                    currentLocation = "Pallet Town";
+                    break;
+                case "2":
+                    Console.WriteLine("You are in Viridian City, known for its Pokémon Center.");
+                    currentLocation = "Viridian City";
+                    break;
+                case "3":
+                    Console.WriteLine("You are in Pewter City, home of the first Gym Leader.");
+                    currentLocation = "Pewter City";
+                    break;
+                default:
+                    Console.WriteLine("Unknown location. Please choose a valid place.");
+                    break;
+            }
+
+            Console.WriteLine($"Now you are in {currentLocation}");
+            Console.WriteLine("1.go to route 1");
+            Console.WriteLine("2.go to route 2");
+            Console.WriteLine("3.Fight gym leader");
+            location = Console.ReadLine();
+            switch (location)
+            {
+                case "1":
+                    Console.WriteLine("You are in route 1, where you can catch wild Pokémon!");
+                    break;
+                    case "2":
+                    Console.WriteLine("You are in route 2, where you can find more wild Pokémon!");
+                    break;
+                    case "3":
+                    Console.WriteLine("You are ready to fight the gym leader!");
+                    
+                    break;
+            }
+            if (location == "1" || location == "2")
+            {
+                Console.WriteLine("You can catch wild Pokémon here!");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                Console.WriteLine("You caught a wild Pokémon!");
+            }
+            else if (location == "3")
+            {
+                int yesno = Console.Read();
+                Console.WriteLine("Ready to fight?");
+                Console.WriteLine("1.yes");
+                Console.WriteLine("2.no");
+                if(yesno == 1)
+                {
+                    Pokemon1.Battle(EnemyPokemon1);
+                }
+               
+                else
+                {
+                    Console.WriteLine("Invalid choice. Please try again.");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. Please try again.");
+            }
 
 
 
