@@ -72,6 +72,7 @@ namespace c_
                 moves1 = new Move[] { tackle, tailWhip, bubble, growl };
             else if (name == "Eevee")
                 moves1 = new Move[] { tackle, growl, quickAttack, growl };
+
             else
                 throw new ArgumentException("Unknown Pokemon type");
 
@@ -184,9 +185,8 @@ namespace c_
     {
         public legendary(string name, int level, string type) : base(name, level, type)
         {
-            // Legendary Pokemon can have special moves or attributes if needed
-            // For now, it just inherits from pokemon
+            
         }
-        // You can add more methods or properties specific to legendary Pokemon here
+        
     }
 }

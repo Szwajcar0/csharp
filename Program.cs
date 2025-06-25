@@ -7,7 +7,6 @@ namespace C
     {
         static void Main(string[] args)
         {
-            string slowo = "kutas";
             Console.WriteLine("Hello, what is your name?");
             Console.WriteLine("Tell your name");
             string name = Console.ReadLine();
